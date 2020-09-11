@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">GADS Leaderboard</string>
+    <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="leaderboard">Leaderboard</string>
+    <string name="submit">Submit</string>
+    <string name="error_data_message">Error Loading Data from the GADS Leaderboard API</string>
+    <string name="project_submission">Project Submission</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email_address">Email Address</string>
+    <string name="project_on_github_link">Project on Github (link)</string>
+    <string name="title_enter_post">Enter Post</string>
+    <string name="hint_title">Post Title</string>
+    <string name="hint_body">Post Body</string>
+    <string name="action_submit">Submit</string>
+    <string name="submission_successful">Submission Successful</string>
+    <string name="submission_not_successful">Submission not Successful</string>
+    <string name="are_you_sure">Are you sure</string>
+    <string name="yes">Yes</string>
+    <string name="question_mark">\?</string>
+</resources>

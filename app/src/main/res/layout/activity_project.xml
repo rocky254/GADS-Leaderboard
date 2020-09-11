@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    tools:context=".ProjectActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/submission_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+        <ImageView
+            android:id="@+id/header_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="60dp"
+            android:fitsSystemWindows="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/gads" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/submission_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/project_submission"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/projectOrange"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/submission_toolbar" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/text_underline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/submission_text" />
+
+    <LinearLayout
+        android:id="@+id/names_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/first_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/edit_text"
+                android:ems="10"
+                android:hint="@string/first_name"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textColorHint="@color/colorPrimary" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/last_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/edit_text"
+                android:ems="10"
+                android:hint="@string/last_name"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textColorHint="@color/colorPrimary" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/email_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="10"
+        app:layout_constraintTop_toBottomOf="@+id/names_layout">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/email_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/edit_text"
+                android:ems="10"
+                android:hint="@string/email_address"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:textColorHint="@color/colorPrimary"
+                tools:layout_editor_absoluteX="38dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/project_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="10"
+        app:layout_constraintTop_toBottomOf="@+id/email_layout">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/project_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/edit_text"
+                android:ems="10"
+                android:hint="@string/project_on_github_link"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textColorHint="@color/colorPrimary"
+                tools:layout_editor_absoluteX="10dp"
+                tools:layout_editor_absoluteY="306dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submit_project"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/btn_submit"
+        android:elevation="5dp"
+        android:text="@string/submit"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/project_layout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
